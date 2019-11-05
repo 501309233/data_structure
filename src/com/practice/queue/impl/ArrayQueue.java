@@ -56,7 +56,7 @@ public class ArrayQueue<E> implements Queue<E> {
      */
     @Override
     public boolean isEmpty() {
-        return array.empty();
+        return array.isEmpty();
     }
 
     @Override

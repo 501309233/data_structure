@@ -39,7 +39,7 @@ public class Array<E> {
      * 返回当前数组是否为空
      * @return
      */
-    public boolean empty(){
+    public boolean isEmpty(){
         return size==0;
     }
 
@@ -241,6 +241,18 @@ public class Array<E> {
         }
         stringBuilder.append("]");
         return stringBuilder.toString();
+    }
+
+    /**
+     * 交换两个索引的元素的位置
+     */
+    public void swap(int i , int j){
+        if (i<0 || i>=size || j<0||j>=size){
+            throw new IllegalArgumentException("Index is illegal.");
+        }
+        E t = data[i];
+        data[i]=data[j];
+        data[j]=t;
     }
 
 
